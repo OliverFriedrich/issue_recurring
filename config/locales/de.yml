@@ -1,0 +1,134 @@
+# English strings go here for Rails i18n
+de:
+  field_recurrence_of: 'Wiederholung von'
+  errors:
+    format: '%{message}'
+  activerecord:
+    errors:
+      models:
+        issue_recurrence:
+          attributes:
+            issue:
+              insufficient_privileges: 'Sie haben keine ausreichenden Berechtigungen, um Wiederholungen für dieses Ticket zu bearbeiten.'
+            anchor_mode:
+              close_anchor_no_delay: 'Die Verzögerung kann nicht für Wiederholungen aufgrund des Abschlussdatums angegeben werden.'
+              issue_anchor_no_blank_dates: 'Wiederholungen, die auf Ausgabe- oder letzten Wiederholungsdaten basieren, können nicht erstellt werden, wenn beide Daten (Beginn und Fälligkeit) leer sind.'
+              in_place_closed_only: 'Nur Wiederholungen, die vom Abschlussdatum abhängen, können das Problem vor Ort ändern.'
+              date_anchor_in_place_only: 'Wiederholungen, die auf einem festen Datum basieren, können nur für die Vor-Ort-Modifikation verwendet werden.'
+            creation_mode:
+              only_one_in_place: 'Nur eine Ersatz-Wiederholung kann geplant werden.'
+            anchor_to_start:
+              start_mode_requires_date: 'Wiederholung basierend auf dem Startdatum kann nicht für ein Ticket ohne Startdatum angelegt werden.'
+              due_mode_requires_date: 'Wiederholungen auf Basis der Fälligkeit können nicht für ein Ticket ohne Fälligkeitsdatum erstellt werden.'
+            date_limit:
+              not_in_future: 'benutzerseitig angegebenes Wiederholungslimitdatum muss in Zukunft liegen'
+  project_menu_caption: 'Ticket-Wiederholungen'
+  journal_warning: "<b>Warnung</b>: kann die Wiederholung nicht erneuern, %{msg}."
+  settings:
+    issue_recurrences:
+      author: 'Setze Autor der neuen Wiederholung auf'
+      author_unchanged: 'den Autor des ursprünglichen Tickets'
+      keep_assignee: 'Übernehme den Beauftragten von der vorherigen Wiederholung.'
+      keep_assignee_hint: 'Wenn das Kontrollkästchen deaktiviert ist, gelten die Standardzuordnungsregeln.'
+      add_journal: 'Journaleintrag bei der Erneuerung der Wiederholung hinzufügen'
+      add_journal_hint: 'Journal wird nur bei Ursprungsticket hinzugefügt (nicht in neuer Kopie).'
+  issue_recurrences:
+    index:
+      heading: 'Ticket-Wiederholungen'
+      issue: 'Ticket'
+      last_recurrence: 'Letzte Wiederholung'
+      mode: 'Alle'
+      next_recurrence: 'Nächste Wiederholung'
+      include_subtasks: 'Unteraufgaben?'
+      creation_mode: 'Anlegen'
+      anchor_mode: 'Basierend auf'
+      limit: 'Limit'
+      count: '#'
+      anchor_modes:
+        first_issue_fixed: 'erstes Ticket'
+        last_issue_fixed: 'letztes Ticket'
+        last_issue_flexible: 'letztes Ticket schließen wie'
+        last_issue_flexible_on_delay: 'letztes Ticket bei Verzögerung schließen wie'
+        last_issue_fixed_after_close: 'letztes Ticket (nach Abschlussdatum) wie'
+        date_fixed_after_close: 'Festes Datum (nach Abschlussdatum) wie'
+  issues:
+    issue_recurrences_hook:
+      recurrences: 'Wiederholungen'
+      this_is_recurrence: 'Dies ist eine Wiederholung von'
+      button_details: 'Details'
+    recurrences:
+      index:
+        last_recurrence: 'Letztes:'
+        next_recurrence: 'Nächstes:'
+      details:
+      form:
+        creation_modes:
+          copy_first: 'Kopiere das <b>Ticket</b>'
+          copy_last: 'Kopiere die <b>letzte Wiederholung</b> des Tickets'
+          in_place: '<b>Aktualisiere</b> das Ticket'
+        include_subtasks:
+          :true: 'mit Unteraufgaben'
+          :false: 'ohne Unteraufgaben'
+        subtasks: 'Unteraufgabe'
+        every: 'alle'
+        mode_intervals:
+          daily: 'Tage'
+          daily_wday: 'Arbeitstage'
+          weekly: 'Wochen'
+          monthly_day_from_first: 'Monate'
+          monthly_day_to_last: 'Monate'
+          monthly_dow_from_first: 'Monate'
+          monthly_dow_to_last: 'Monate'
+          monthly_wday_from_first: 'Monate'
+          monthly_wday_to_last: 'Monate'
+          yearly: 'Jahre'
+        mode_descriptions:
+          daily: ''
+          daily_wday: ''
+          weekly: ''
+          monthly_day_from_first: 'am selben Tag des Monats'
+          monthly_day_to_last: 'am selben Tag vom Ende des Monats'
+          monthly_dow_from_first: 'am selben Wochentag des Monats'
+          monthly_dow_to_last: 'am selben Wochentag vom Ende des Monats'
+          monthly_wday_from_first: 'am selben Arbeitstag des Monats'
+          monthly_wday_to_last: 'am selben Arbeitstag vom Ende des Monats'
+          yearly: ''
+        mode_modifiers:
+          daily: ''
+          daily_wday: ''
+          weekly: ''
+          monthly_day_from_first: 'am %{days_from_bom} Tag'
+          monthly_day_to_last: 'am %{days_to_eom} zum Monatsende'
+          monthly_dow_from_first: 'am %{dows_from_bom} %{day_of_week}'
+          monthly_dow_to_last: 'am %{dows_to_eom}-letzten %{day_of_week}'
+          monthly_wday_from_first: 'am %{wdays_from_bom} Arbeitstag'
+          monthly_wday_to_last: 'am %{wdays_to_eom}-letzten Arbeitstag'
+          yearly: ''
+        based_on: 'basierend auf dem'
+        anchor_modes:
+          first_issue_fixed: 'dieses <b>Tickets</b>'
+          last_issue_fixed: 'der <b>letzten Wiederholung</b>'
+          last_issue_flexible: 'kopiert vom <b>Abschlussdatum der letzten Wiederholung</b>'
+          last_issue_flexible_on_delay: 'der <b>der letzten Wiederholung, wenn diese rechtzeitig abschlossen wurde,</b> anderfalls kopiere das Abschlussdatum'
+          last_issue_fixed_after_close: 'der <b>letzten Wiederholung (wiederholt sich nur nach Abschluss der letzten Wiederholung)</b>'
+          date_fixed_after_close: 'kopiert vom <b>festen Datum</b> (wiederholt sich nur nach Abschluss der letzten Wiederholung):'
+        anchor_to_start:
+          :true: '<b>Startdatum</b>'
+          :false: '<b>Fälligkeitsdatum</b>'
+        delayed_by: ', verzögert um'
+        delay_modes:
+          day: 'Tag(e)'
+          week: 'Woche(n)'
+          month: 'Monat(e)'
+          year: 'Jahr(e)'
+        delay_intervals:
+          day: 'Tag'
+          week: 'Woche'
+          month: 'Monat'
+        until: 'und wiederhole'
+        limit_modes:
+          forever: '<b>für immer</b>'
+          fixed_date: 'bis zum <b>festen Datum (einschliesslich):</b>'
+          count: 'für eine <b>Anzahl an Wiederholungen</b>:'
+        recurrence: 'Wiederholung'
+
